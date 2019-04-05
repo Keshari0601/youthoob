@@ -1,0 +1,700 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:keepScreenOn="true"
+    tools:context=".Main2Activity">
+
+
+    <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/layouttt"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:keepScreenOn="true"
+        tools:context=".Main2Activity">
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:id="@+id/swipeContainer"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@+id/buttons"
+            app:layout_constraintEnd_toStartOf="@+id/buttonsv"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+
+            <WebView
+                android:id="@+id/webview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+            </WebView>
+
+
+        </android.support.v4.widget.SwipeRefreshLayout>
+
+        <Button
+        android:id="@+id/bbarv"
+        android:layout_width="2dp"
+        android:layout_height="0dp"
+        android:background="@android:color/background_dark"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/buttonsv"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+
+    <LinearLayout
+        android:id="@+id/buttonsv"
+        android:layout_width="57dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/backgroundh"
+        android:divider="?android:listDivider"
+        android:dividerPadding="12.0dip"
+        android:gravity="bottom"
+        android:orientation="vertical"
+        android:showDividers="middle"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <ImageButton
+            android:id="@+id/optionv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1.0"
+            android:background="?android:selectableItemBackground"
+            android:padding="2.0dip"
+            android:scaleType="fitCenter"
+            android:src="@drawable/option" />
+
+        <ImageButton
+            android:id="@+id/status_bar_bbv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1.0"
+            android:background="?android:selectableItemBackground"
+            android:padding="2.0dip"
+            android:scaleType="fitCenter"
+            android:src="@drawable/bb" />
+
+        <ImageButton
+            android:id="@+id/status_bar_playlayoutv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1.0"
+            android:background="?android:selectableItemBackground"
+            android:padding="2.0dip"
+            android:scaleType="fitCenter"
+            android:src="@drawable/apollo_holo_dark_play" />
+
+        <ImageButton
+            android:id="@+id/status_bar_ffv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1.0"
+            android:background="?android:selectableItemBackground"
+            android:padding="2.0dip"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ff" />
+
+        <ImageButton
+            android:id="@+id/status_bar_nextv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1.0"
+            android:background="?android:selectableItemBackground"
+            android:padding="2.0dip"
+            android:scaleType="fitCenter"
+            android:src="@drawable/apollo_holo_dark_next" />
+
+
+    </LinearLayout>
+
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="0dp"
+        android:layout_height="5dp"
+        android:layout_marginTop="-5dp"
+        android:progressDrawable="@drawable/greenprogress"
+        app:layout_constraintEnd_toStartOf="@+id/buttonsv"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <Button
+        android:id="@+id/bbar"
+        android:layout_width="fill_parent"
+        android:layout_height="2dp"
+        android:background="@android:color/background_dark"
+        app:layout_constraintBottom_toTopOf="@+id/buttons"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+    <LinearLayout
+        android:id="@+id/buttons"
+        android:layout_width="wrap_content"
+        android:layout_height="57dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/background"
+        android:divider="?android:listDivider"
+        android:dividerPadding="12.0dip"
+        android:gravity="bottom"
+        android:orientation="horizontal"
+        android:showDividers="middle"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/webview">
+
+
+        <ImageButton
+            android:id="@+id/option"
+            android:layout_width="0.0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="1.0"
+            android:background="?android:selectableItemBackground"
+            android:padding="2.0dip"
+            android:scaleType="fitCenter"
+            android:src="@drawable/option" />
+
+        <ImageButton
+            android:id="@+id/status_bar_bb"
+            android:layout_width="0.0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="1.0"
+            android:background="?android:selectableItemBackground"
+            android:padding="2.0dip"
+            android:scaleType="fitCenter"
+            android:src="@drawable/bb" />
+
+        <ImageButton
+            android:id="@+id/status_bar_playlayout"
+            android:layout_width="0.0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="1.0"
+            android:background="?android:selectableItemBackground"
+            android:padding="2.0dip"
+            android:scaleType="fitCenter"
+            android:src="@drawable/apollo_holo_dark_play" />
+
+        <ImageButton
+            android:id="@+id/status_bar_ff"
+            android:layout_width="0.0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="1.0"
+            android:background="?android:selectableItemBackground"
+            android:padding="2.0dip"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ff" />
+
+        <ImageButton
+            android:id="@+id/status_bar_next"
+            android:layout_width="0.0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="1.0"
+            android:background="?android:selectableItemBackground"
+            android:padding="2.0dip"
+            android:scaleType="fitCenter"
+            android:src="@drawable/apollo_holo_dark_next" />
+
+
+    </LinearLayout>
+
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/optionlayoutm"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <LinearLayout
+            android:id="@+id/optionlayout"
+
+            android:layout_width="match_parent"
+            android:layout_height="93dp"
+            android:layout_marginBottom="59dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            tools:layout_editor_absoluteX="27dp">
+
+            <Button
+                android:id="@+id/bcbar"
+
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@android:color/background_dark"
+                android:shadowDx="-2"
+                android:shadowDy="-2" />
+
+
+            <LinearLayout
+                android:id="@+id/buttonsnew"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginBottom="0dp"
+                android:background="#d3d3d3"
+                android:divider="?android:listDivider"
+                android:dividerPadding="12.0dip"
+                android:gravity="bottom"
+                android:orientation="horizontal"
+                android:showDividers="middle"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
+
+
+                <Button
+                    android:id="@+id/home"
+                    android:layout_width="0.0dip"
+
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.0"
+                    android:background="@android:drawable/checkbox_off_background"
+                    android:gravity="center"
+                    android:padding="10.0dip"
+                    android:shadowColor="@android:color/darker_gray"
+                    android:shadowDx="2"
+                    android:shadowDy="2"
+                    android:shadowRadius="2"
+                    android:text="Home"
+                    android:textSize="10sp" />
+
+                <Button
+                    android:id="@+id/trending"
+                    android:layout_width="0.0dip"
+                    android:layout_height="match_parent"
+
+                    android:layout_weight="1.0"
+                    android:background="@android:drawable/checkbox_off_background"
+                    android:gravity="center"
+
+                    android:padding="10.0dip"
+                    android:shadowColor="@android:color/darker_gray"
+                    android:shadowDx="2"
+                    android:shadowDy="2"
+                    android:shadowRadius="2"
+                    android:text="Trending"
+                    android:textSize="10sp" />
+
+                <Button
+                    android:id="@+id/subscriptions"
+                    android:layout_width="0.0dip"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.0"
+
+                    android:background="@android:drawable/checkbox_off_background"
+
+                    android:padding="10.0dip"
+                    android:shadowColor="@android:color/darker_gray"
+                    android:shadowDx="2"
+                    android:shadowDy="2"
+                    android:shadowRadius="2"
+                    android:text="Favourites"
+                    android:textSize="10sp" />
+
+                <Button
+                    android:id="@+id/library"
+                    android:layout_width="0.0dip"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.0"
+                    android:background="@android:drawable/checkbox_off_background"
+                    android:gravity="center"
+
+                    android:padding="10.0dip"
+                    android:shadowColor="@android:color/darker_gray"
+                    android:shadowDx="2"
+
+                    android:shadowDy="2"
+                    android:shadowRadius="2"
+                    android:text="Library"
+                    android:textSize="10sp" />
+
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/srhxdrr"
+
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/background_dark" />
+
+            <LinearLayout
+                android:id="@+id/buttonsnew1"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginBottom="0dp"
+                android:layout_marginTop="0dp"
+                android:background="#d3d3d3"
+                android:divider="?android:listDivider"
+                android:dividerPadding="12.0dip"
+                android:gravity="bottom"
+                android:orientation="horizontal"
+                android:showDividers="middle"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <Button
+                    android:id="@+id/download"
+                    android:layout_width="0.0dip"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.0"
+                    android:background="@android:drawable/checkbox_off_background"
+                    android:padding="10.0dip"
+
+                    android:shadowColor="@android:color/darker_gray"
+                    android:shadowDx="2"
+                    android:shadowDy="2"
+                    android:shadowRadius="2"
+
+                    android:text="Download"
+                    android:textSize="10sp" />
+
+
+
+                <CheckBox
+                    android:id="@+id/images"
+                    android:layout_width="0.0dip"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.0"
+                    android:background="#eae9e9"
+
+                    android:gravity="center"
+
+                    android:paddingBottom="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="10dp"
+                    android:shadowColor="@android:color/darker_gray"
+                    android:shadowDx="2"
+                    android:shadowDy="2"
+                    android:shadowRadius="2"
+                    android:text="IMAGES"
+                    android:textSize="10sp" />
+
+
+                <CheckBox
+                    android:id="@+id/loop"
+                    android:layout_width="0.0dip"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.0"
+                    android:background="#eae9e9"
+
+                    android:gravity="center"
+
+                    android:paddingBottom="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="10dp"
+                    android:shadowColor="@android:color/darker_gray"
+                    android:shadowDx="2"
+                    android:shadowDy="2"
+                    android:shadowRadius="2"
+                    android:text="Loop"
+                    android:textSize="10sp" />
+
+
+                <Button
+                    android:id="@+id/mores"
+                    android:layout_width="0.0dip"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.0"
+                    android:background="@android:drawable/checkbox_off_background"
+                    android:padding="10.0dip"
+
+                    android:shadowColor="@android:color/darker_gray"
+                    android:shadowDx="2"
+                    android:shadowDy="2"
+                    android:shadowRadius="2"
+
+                    android:text="More..."
+                    android:textSize="10sp" />
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/optionlayoutmv"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/webview"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <LinearLayout
+            android:id="@+id/optionlayoutv"
+
+            android:layout_width="0dp"
+            android:layout_height="93dp"
+            android:layout_marginEnd="59dp"
+            android:layout_marginRight="59dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <Button
+                android:id="@+id/bcbar"
+
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@android:color/background_dark"
+                android:shadowDx="-2"
+                android:shadowDy="-2" />
+
+
+            <LinearLayout
+                android:id="@+id/buttonsnew"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginBottom="0dp"
+                android:background="#d3d3d3"
+                android:divider="?android:listDivider"
+                android:dividerPadding="12.0dip"
+                android:gravity="bottom"
+                android:orientation="horizontal"
+                android:showDividers="middle"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
+
+
+                <Button
+                    android:id="@+id/homev"
+                    android:layout_width="0.0dip"
+
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.0"
+                    android:background="@android:drawable/checkbox_off_background"
+                    android:gravity="center"
+                    android:padding="10.0dip"
+                    android:shadowColor="@android:color/darker_gray"
+                    android:shadowDx="2"
+                    android:shadowDy="2"
+                    android:shadowRadius="2"
+                    android:text="Home"
+                    android:textSize="10sp" />
+
+                <Button
+                    android:id="@+id/trendingv"
+                    android:layout_width="0.0dip"
+                    android:layout_height="match_parent"
+
+                    android:layout_weight="1.0"
+                    android:background="@android:drawable/checkbox_off_background"
+                    android:gravity="center"
+
+                    android:padding="10.0dip"
+                    android:shadowColor="@android:color/darker_gray"
+                    android:shadowDx="2"
+                    android:shadowDy="2"
+                    android:shadowRadius="2"
+                    android:text="Trending"
+                    android:textSize="10sp" />
+
+                <Button
+                    android:id="@+id/subscriptionsv"
+                    android:layout_width="0.0dip"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.0"
+
+                    android:background="@android:drawable/checkbox_off_background"
+
+                    android:padding="10.0dip"
+                    android:shadowColor="@android:color/darker_gray"
+                    android:shadowDx="2"
+                    android:shadowDy="2"
+                    android:shadowRadius="2"
+                    android:text="Favourites"
+                    android:textSize="10sp" />
+
+                <Button
+                    android:id="@+id/libraryv"
+                    android:layout_width="0.0dip"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.0"
+                    android:background="@android:drawable/checkbox_off_background"
+                    android:gravity="center"
+
+                    android:padding="10.0dip"
+                    android:shadowColor="@android:color/darker_gray"
+                    android:shadowDx="2"
+
+                    android:shadowDy="2"
+                    android:shadowRadius="2"
+                    android:text="Library"
+                    android:textSize="10sp" />
+
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/srhxdrr"
+
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/background_dark" />
+
+            <LinearLayout
+                android:id="@+id/buttonsnew1"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginBottom="0dp"
+                android:layout_marginTop="0dp"
+                android:background="#d3d3d3"
+                android:divider="?android:listDivider"
+                android:dividerPadding="12.0dip"
+                android:gravity="bottom"
+                android:orientation="horizontal"
+                android:showDividers="middle"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
+
+
+                <Button
+                    android:id="@+id/downloadv"
+                    android:layout_width="0.0dip"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.0"
+                    android:background="@android:drawable/checkbox_off_background"
+                    android:padding="10.0dip"
+
+                    android:shadowColor="@android:color/darker_gray"
+                    android:shadowDx="2"
+                    android:shadowDy="2"
+                    android:shadowRadius="2"
+
+                    android:text="Download"
+                    android:textSize="10sp" />
+
+                <CheckBox
+                    android:id="@+id/imagesv"
+                    android:layout_width="0.0dip"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.0"
+                    android:background="#eae9e9"
+
+                    android:gravity="center"
+
+                    android:paddingBottom="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="10dp"
+                    android:shadowColor="@android:color/darker_gray"
+                    android:shadowDx="2"
+                    android:shadowDy="2"
+                    android:shadowRadius="2"
+                    android:text="IMAGES"
+                    android:textSize="10sp" />
+
+
+                <CheckBox
+                    android:id="@+id/loopv"
+                    android:layout_width="0.0dip"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.0"
+                    android:background="#eae9e9"
+
+                    android:gravity="center"
+
+                    android:paddingBottom="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="10dp"
+                    android:shadowColor="@android:color/darker_gray"
+                    android:shadowDx="2"
+                    android:shadowDy="2"
+                    android:shadowRadius="2"
+                    android:text="Loop"
+                    android:textSize="10sp" />
+
+
+                <Button
+                    android:id="@+id/moresv"
+                    android:layout_width="0.0dip"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.0"
+                    android:background="@android:drawable/checkbox_off_background"
+                    android:padding="10.0dip"
+
+                    android:shadowColor="@android:color/darker_gray"
+                    android:shadowDx="2"
+                    android:shadowDy="2"
+                    android:shadowRadius="2"
+
+                    android:text="More..."
+                    android:textSize="10sp" />
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </android.support.constraint.ConstraintLayout>
+
+    <WebView
+        android:id="@+id/wback"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="8dp" >
+
+
+    </WebView>
+    </android.support.constraint.ConstraintLayout>>
+
+    <FrameLayout
+        android:id="@+id/customViewContainer"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="parent">
+
+         </FrameLayout>
+
+    <ProgressBar
+        android:id="@+id/progressBar2"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="parent" />
+
+</android.support.constraint.ConstraintLayout>
